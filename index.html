@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="icon" href="img/icon.png">
+        <title>Connect 4</title>
+
+        <link href="bootstrap/bootstrap.min.css" rel="stylesheet">
+        <link href="css/connect4.css" rel="stylesheet">
+        
+        <script src="bootstrap/jquery-3.2.1.min.js"></script>
+		<script src="bootstrap/popper.min.js"></script>
+        <script src="bootstrap/bootstrap.min.js"></script>
+		<script src="js/connect4.js"></script>
+    </head>
+    <body onload="draw_empty_board()">
+        <div class="title">Connect 4</div>
+        <br>
+        <div id="connect_four_board">
+        </div>
+        <div>
+            <ul id="columns">
+                <li style="padding-left: 0px;">1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+                <li>6</li>
+                <li>7</li>
+              </ul>  
+        </div>
+        <h1 id="victory">YOU WON!!!</h1>
+        <h1 id="draw">NO WINNER THIS TIME...</h1>
+        <br>
+        <br>
+        <div id="game_initializer">
+            Username : <input type="text" id="username"> 
+            <select onchange="this.className=this.options[this.selectedIndex].className"class="redText" id="pcolor">
+                <option class="redText" value="R">Red</option>
+                <option class="yellowText" value="Y">Yellow</option>
+            </select>
+        <button id="connect_four_login" class="btn btn-primary">JOIN</button><br>
+		</div>
+			<div id="game_info">
+		</div>
+        <br>
+        <div id="move_div">
+            Give the number of the column: <input id="the_move">  <button id="do_move" class="btn btn-primary">MOVE</button><br>
+        </div>
+        <br>
+		<button id="connect_four_reset" class="btn btn-primary">START/RESET</button><br>
+    </body>
+</html>
